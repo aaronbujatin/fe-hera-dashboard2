@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": false,
+    "strictNullChecks": false, // Optional, depending on your project's requirements
+    "strictBindCallApply": false, // Optional, depending on your project's requirements
+    "strictFunctionTypes": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "target": "es2020",
+    "module": "esnext",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
+  }
+}
