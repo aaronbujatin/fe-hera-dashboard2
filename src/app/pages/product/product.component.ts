@@ -39,15 +39,25 @@ export class ProductComponent implements OnInit {
   products: Product[]
   page: number = 1;
   pageSize: number = 10;
+  
+  totalElements : number
   public getAllProduct() {
 
     this.productService.getAllProducts(this.page, this.pageSize).subscribe(
       (response: any) => {
         this.products = response.content
+        this.totalElements = response.totalElements - 1
+        console.log("Fetch product : ",this.products);
+        
       }, (error) => {
         console.log(error);
       }
     )
+  }
+
+  pageChanged(newPage: number) {
+      this.page = newPage;
+      this.getAllProduct(); 
   }
 
 
